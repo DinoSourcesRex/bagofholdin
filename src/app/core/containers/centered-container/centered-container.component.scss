@@ -1,0 +1,10 @@
+@import "partials/mixins";
+
+.main {
+  @include center-grid-container;
+}
+
+.main__container {
+  width: 50%;
+  max-width: 40rem;
+}
