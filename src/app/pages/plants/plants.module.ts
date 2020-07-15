@@ -1,6 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+// Services
+import { PLANT_GLOBAL_SERVICES } from './services/index';
 
 export const ROUTES: Routes = [
   {
@@ -18,5 +20,6 @@ export const ROUTES: Routes = [
 @NgModule({
   declarations: [],
   imports: [CommonModule, RouterModule.forChild(ROUTES)],
+  providers: [...PLANT_GLOBAL_SERVICES],
 })
 export class PlantsModule {}
