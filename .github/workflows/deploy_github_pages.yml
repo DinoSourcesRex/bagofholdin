@@ -36,5 +36,5 @@ jobs:
         build_configuration: production
         base_href: /bagofholdin/
         deploy_branch: master
-        build_folder: ./dist
-        angular_project_dir: ./
+        build_folder: dist
+        angular_project_dir: .
