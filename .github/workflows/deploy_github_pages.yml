@@ -6,8 +6,8 @@ on:
     paths-ignore: [ '.github/**' ]
 
 jobs:
-  test:
-    name: Running 
+  deploy:
+    name: CD Lint, Test and Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -27,12 +27,6 @@ jobs:
     - name: Test
       run: npm run test:ci
 
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
     - name: Angular Deploy gh-pages Actions
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.2.1
       with:
@@ -42,4 +36,4 @@ jobs:
         base_href: /bagofholdin/
         deploy_branch: master
         build_folder: /dist/
-        angular_project_dir: /
+        angular_project_dir: ./
