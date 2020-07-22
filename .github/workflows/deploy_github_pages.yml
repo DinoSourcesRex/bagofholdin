@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.1.1
 
@@ -28,11 +30,12 @@ jobs:
     - name: Test
       run: npm run test:ci
 
-    - name: Angular Deploy gh-pages Actions
-      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.2.1
+    - name: Build
+      run: npm run build:prod
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        run_lint: false
-        github_access_token: ${{ secrets.ACCESS_TOKEN }}
-        build_configuration: production
-        base_href: /bagofholdin/
-        deploy_branch: master
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: master
+        FOLDER: dist
