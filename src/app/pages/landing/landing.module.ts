@@ -19,7 +19,7 @@ export const ROUTES: Routes = [
         path: 'select-pocket',
         loadChildren: () =>
           import('./parent/select-pocket/select-pocket.module').then(
-            (mod) => mod.SelectPocketModule
+            (mod) => mod.SelectPocketModule,
           ),
       },
     ],

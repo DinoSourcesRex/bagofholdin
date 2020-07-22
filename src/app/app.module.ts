@@ -11,7 +11,13 @@ import { PAGE_MODULES } from './pages/index';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, ...PAGE_MODULES, ErrorRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CoreModule,
+    ...PAGE_MODULES,
+    ErrorRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -21,7 +21,7 @@ module.exports = function (config) {
         flags: ['--no-sandbox'],
       },
       singleRun: true,
-      restartOnFileChange: true
+      restartOnFileChange: true,
     },
     client: {
       clearContext: false, // leave Jasmine Spec Runner output visible in browser

@@ -3,13 +3,43 @@ name: Deploy
 on:
   push:
     branches: [ master ]
+    paths-ignore: [ '.github/**' ]
 
 jobs:
   test:
-    name: Test 
+    name: Running 
     runs-on: ubuntu-latest
 
     steps:
-    - name: Run a one-line script
-      run: echo Hello, world!
-    
+    - uses: actions/checkout@v2
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.1.1
+
+    - name: Install
+      run: npm install
+
+    - name: Lint
+      run: npm run lint
+
+    - name: Prettier
+      run: npm run prettier:check
+
+    - name: Test
+      run: npm run test:ci
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Angular Deploy gh-pages Actions
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.2.1
+      with:
+        run_lint: false
+        github_access_token: ${{ secrets.ACCESS_TOKEN }}
+        build_configuration: production
+        base_href: /bagofholdin/
+        deploy_branch: master
+        build_folder: /dist/
+        angular_project_dir: /
