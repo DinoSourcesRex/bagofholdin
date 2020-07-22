@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    name: Running 
+    name: CI Lint and Test 
     runs-on: ubuntu-latest
 
     steps:
@@ -18,5 +18,11 @@ jobs:
     - name: Install
       run: npm install
 
+    - name: Lint
+      run: npm run lint
+
+    - name: Prettier
+      run: npm run prettier:check
+
     - name: Test
-      run: npm test:ci
+      run: npm run test:ci
