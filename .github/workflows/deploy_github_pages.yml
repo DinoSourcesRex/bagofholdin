@@ -32,7 +32,8 @@ jobs:
 
     - name: Build and Deploy
       run: |
-        git config --global user.email ${{ secrets.EMAIL }}
-        git config --global user.name ${{ secrets.USERNAME }}
+        git config --global user.email dino.sources.rex@gmail.com
+        git config --global user.name DinoSourcesRex
         git remote set-url origin https://${{ secrets.ACCESS_TOKEN }}@github.com/bagofholdin.git
+        git remote set-url origin https://${{ secrets.ACCESS_TOKEN }}@github.com/DinoSourcesRex/bagofholdin.git
         npm run deploy
