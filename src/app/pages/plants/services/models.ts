@@ -7,6 +7,7 @@ export interface Plant {
   statblock?: string;
 }
 
+// todo: do we need enums for these?
 export interface Location {
   location: string;
   rarity: string;
