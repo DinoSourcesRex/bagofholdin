@@ -1,0 +1,8 @@
+<p>plant-masonry-grid works!</p>
+
+<ngx-masonry [options]="masonryOptions" *ngIf="allPlants | async as plants">
+  <div ngxMasonryItem class="masonry-item" *ngFor="let plant of plants">
+    {{ plant.name }}
+    <dnd-plant-card [plant]="plant"></dnd-plant-card>
+  </div>
+</ngx-masonry>
