@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 // Components
 import { LayoutComponent } from './parent/layout/layout.component';
+// Third Party
+import { NgxMasonryModule } from 'ngx-masonry';
+import { PlantCardComponent } from './child/plant-card/plant-card.component';
 
 export const ROUTES: Routes = [
   {
@@ -13,7 +16,7 @@ export const ROUTES: Routes = [
 ];
 
 @NgModule({
-  declarations: [LayoutComponent],
-  imports: [CommonModule, RouterModule.forChild(ROUTES)],
+  declarations: [LayoutComponent, PlantCardComponent],
+  imports: [CommonModule, RouterModule.forChild(ROUTES), NgxMasonryModule],
 })
 export class MainModule {}
