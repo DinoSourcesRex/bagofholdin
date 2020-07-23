@@ -1,6 +1,7 @@
 <div class="layout_container">
   <div class="layout_container_left">
     LIST
+    <dnd-plant-masonry-grid></dnd-plant-masonry-grid>
     <ngx-masonry [options]="masonryOptions" *ngIf="allPlants | async as plants">
       <div ngxMasonryItem class="masonry-item" *ngFor="let plant of plants">
         {{ plant.name }}
@@ -12,9 +13,11 @@
   <div class="layout_container_right">
     <div class="layout_container_filter">
       FILTER
+      <dnd-plant-filter></dnd-plant-filter>
     </div>
     <div class="layout_container_details">
       DETAILS
+      <dnd-plant-detail></dnd-plant-detail>
     </div>
   </div>
 </div>
