@@ -8,9 +8,8 @@ describe('PlantMasonryGridComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlantMasonryGridComponent ]
-    })
-    .compileComponents();
+      declarations: [PlantMasonryGridComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

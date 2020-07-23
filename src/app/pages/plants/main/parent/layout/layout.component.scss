@@ -7,7 +7,9 @@
 .layout_container_left {
   outline: 1px solid blue;
   overflow-y: auto;
+  overflow-x: hidden;
   height: calc(100vh - 20px);
+  padding-right: 20px;
 }
 
 .layout_container_right {
