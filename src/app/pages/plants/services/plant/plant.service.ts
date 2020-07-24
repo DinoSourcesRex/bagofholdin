@@ -7,9 +7,7 @@ import { Plant } from '../models';
 // Data
 import { PlantsData } from '../plants.data';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class PlantService {
   getAllPlants(): Observable<Plant[]> {
     return of(PlantsData.plants);

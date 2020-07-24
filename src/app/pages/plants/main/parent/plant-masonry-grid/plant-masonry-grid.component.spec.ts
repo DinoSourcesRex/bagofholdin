@@ -1,5 +1,8 @@
+// Angular
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+// Service
+import { PlantService } from '@plants/services/plant/plant.service';
+// Component
 import { PlantMasonryGridComponent } from './plant-masonry-grid.component';
 
 describe('PlantMasonryGridComponent', () => {
@@ -9,6 +12,7 @@ describe('PlantMasonryGridComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [PlantMasonryGridComponent],
+      providers: [PlantService],
     }).compileComponents();
   }));
 

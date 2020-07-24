@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { Routes } from '@angular/router';
 // Components
 import { SelectPocketComponent } from './select-pocket.component';
+// Modules
+import { FeatureFlagModule } from '@feature-flag/feature-flag.module';
 
 export const ROUTES: Routes = [
   {
@@ -15,6 +17,10 @@ export const ROUTES: Routes = [
 
 @NgModule({
   declarations: [SelectPocketComponent],
-  imports: [CommonModule, RouterModule.forChild(ROUTES)],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(ROUTES),
+    FeatureFlagModule.forRoot(),
+  ],
 })
 export class SelectPocketModule {}
