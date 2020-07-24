@@ -16,7 +16,9 @@
     "noUnusedParameters": true,
     "lib": ["es2018", "dom"],
     "paths": {
+      "@shared": ["src/app/infrastructure/shared"],
       "@shared/*": ["src/app/infrastructure/shared/*"],
+      "@feature-flag/*": ["src/app/infrastructure/feature-flag/*"],
       "@plants/*": ["src/app/pages/plants/*"]
     }
   },
