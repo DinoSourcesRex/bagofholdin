@@ -1,13 +1,11 @@
 // Angular
-import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// Services
-import { PLANT_GLOBAL_SERVICES } from './services/index';
+import { Routes, RouterModule } from '@angular/router';
 
 export const ROUTES: Routes = [
   {
-    path: 'plants',
+    path: 'slurs',
     children: [
       {
         path: '',
@@ -21,6 +19,5 @@ export const ROUTES: Routes = [
 @NgModule({
   declarations: [],
   imports: [CommonModule, RouterModule.forChild(ROUTES)],
-  providers: [...PLANT_GLOBAL_SERVICES],
 })
-export class PlantsModule {}
+export class SlursModule {}

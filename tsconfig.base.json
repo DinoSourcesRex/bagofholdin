@@ -19,7 +19,8 @@
       "@shared": ["src/app/infrastructure/shared"],
       "@shared/*": ["src/app/infrastructure/shared/*"],
       "@feature-flag/*": ["src/app/infrastructure/feature-flag/*"],
-      "@plants/*": ["src/app/pages/plants/*"]
+      "@plants/*": ["src/app/pages/plants/*"],
+      "@slurs/*": ["src/app/pages/slurs/*"]
     }
   },
   "angularCompilerOptions": {
