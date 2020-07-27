@@ -7,9 +7,10 @@ import { LayoutComponent } from './parent/layout/layout.component';
 import { PlantDetailComponent } from './parent/plant-detail/plant-detail.component';
 import { PlantFilterComponent } from './parent/plant-filter/plant-filter.component';
 import { PlantMasonryGridComponent } from './parent/plant-masonry-grid/plant-masonry-grid.component';
+// Services
+import { PlantCardComponent } from './child/plant-card/plant-card.component';
 // Third Party
 import { NgxMasonryModule } from 'ngx-masonry';
-import { PlantCardComponent } from './child/plant-card/plant-card.component';
 
 export const ROUTES: Routes = [
   {
