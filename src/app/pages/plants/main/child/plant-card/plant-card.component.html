@@ -1,4 +1,8 @@
-<span>{{ plant.name }}</span>
-<div *ngFor="let location of plant.locations">
+<div
+  ngxMasonryItem
+  class="masonry-item"
+  *ngFor="let location of plant.locations"
+>
+  <span>{{ plant.name }}</span>
   <dnd-chip [title]="location.location" [rarity]="location.rarity"></dnd-chip>
 </div>

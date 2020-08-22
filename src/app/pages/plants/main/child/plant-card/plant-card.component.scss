@@ -4,3 +4,11 @@ span {
   text-shadow: -1px -1px 0 rgb(103, 129, 70), 1px -1px 0 rgb(103, 129, 70),
     -1px 1px 0 rgb(103, 129, 70), 1px 1px 0 rgb(103, 129, 70);
 }
+
+.masonry-item {
+  width: 300px;
+  height: 150px;
+  border: 1px solid green;
+  background-color: rgb(146, 185, 163);
+  margin: 10px;
+}
