@@ -15,4 +15,8 @@ export class ChipComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  get rarityWithoutSpaces() {
+    return this.rarity.replace(/\s+/g, '').toLowerCase();
+  }
 }

@@ -1,1 +1,3 @@
-<div class="chip-container">{{ title }} {{ rarity }}</div>
+<div class="chip-container" [ngClass]="'rarity--level-' + rarityWithoutSpaces">
+  {{ title }}, {{ rarity }}
+</div>
