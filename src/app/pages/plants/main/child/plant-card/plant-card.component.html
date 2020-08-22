@@ -1,1 +1,4 @@
-<p>{{ plant.name }} {{ plant.locations.length }}</p>
+<span>{{ plant.name }}</span>
+<div *ngFor="let location of plant.locations">
+  <dnd-chip [title]="location.location" [rarity]="location.rarity"></dnd-chip>
+</div>

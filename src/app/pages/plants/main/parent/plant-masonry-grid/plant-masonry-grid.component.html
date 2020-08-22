@@ -1,12 +1,5 @@
 <ngx-masonry [options]="masonryOptions" *ngIf="allPlants | async as plants">
   <div ngxMasonryItem class="masonry-item" *ngFor="let plant of plants">
-    <span>{{ plant.name }}</span>
-    <div *ngFor="let location of plant.locations">
-      <dnd-chip
-        [title]="location.location"
-        [rarity]="location.rarity"
-      ></dnd-chip>
-    </div>
     <dnd-plant-card [plant]="plant"></dnd-plant-card>
   </div>
 </ngx-masonry>
