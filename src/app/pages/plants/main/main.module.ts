@@ -2,6 +2,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+// Modules
+import { SharedModule } from '@shared/shared.module';
 // Components
 import { LayoutComponent } from './parent/layout/layout.component';
 import { PlantDetailComponent } from './parent/plant-detail/plant-detail.component';
@@ -27,6 +29,11 @@ export const ROUTES: Routes = [
     PlantFilterComponent,
     PlantMasonryGridComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(ROUTES), NgxMasonryModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(ROUTES),
+    NgxMasonryModule,
+    SharedModule.forRoot(),
+  ],
 })
 export class MainModule {}
