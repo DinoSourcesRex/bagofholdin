@@ -2,11 +2,12 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // Index.ts
-import { SHARED_SERVICES } from './index';
+import { SHARED_SERVICES, SHARED_COMPONENTS } from './index';
 
 @NgModule({
-  declarations: [],
+  declarations: [...SHARED_COMPONENTS],
   imports: [CommonModule],
+  exports: [...SHARED_COMPONENTS],
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders<SharedModule> {
