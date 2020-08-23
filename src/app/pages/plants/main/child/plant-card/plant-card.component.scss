@@ -1,7 +1,7 @@
 span {
   font-weight: 700;
   font-size: 20px;
-  color: rgb(91, 102, 91);
+  color: rgb(65, 80, 58);
 }
 
 .masonry-item {
@@ -12,15 +12,21 @@ span {
   min-height: 50px;
   max-height: 150px;
   border-radius: 6px;
-  background-color: rgba(245, 245, 245, 0.911);
+  background-color: rgba(225, 235, 217, 0.911);
   margin: 10px;
-  box-shadow: 0px, 3px, 6px, 0, gray;
-  -webkit-box-shadow: 0px 14px 17px 0px rgba(116, 163, 123, 0.65);
-  -moz-box-shadow: 0px 14px 17px 0px rgba(116, 163, 123, 0.65);
-  box-shadow: 0px 14px 17px 0px rgba(116, 163, 123, 0.65);
+  border: 0.1px solid rgba(82, 90, 80, 0.911);
+  box-shadow: 0 9px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .chip-list {
   display: flex;
   flex-flow: wrap;
+}
+
+.masonry-item:hover {
+  box-shadow: 0px 0px 15px 6px rgb(143, 246, 215);
+  // border: 0.1px solid rgba(163, 194, 156, 0.87);
+  border: 0.1px solid rgba(221, 238, 234, 0.911);
+  border-radius: 6px;
 }
