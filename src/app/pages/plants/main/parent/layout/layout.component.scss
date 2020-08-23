@@ -1,18 +1,9 @@
-span {
-  padding: 10px;
-  font-weight: 700;
-  color: whitesmoke;
-  font-size: 55px;
-  text-shadow: -1px -1px 0 rgb(103, 129, 70), 1px -1px 0 rgb(103, 129, 70),
-    -1px 1px 0 rgb(103, 129, 70), 1px 1px 0 rgb(103, 129, 70);
-}
-
 .layout_container {
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  background-color: rgba(48, 71, 49, 0.623);
+  background-color: rgb(118, 149, 118);
 }
 
 .layout_container_left {
@@ -20,8 +11,19 @@ span {
   overflow-x: hidden;
   height: calc(100vh - 20px);
   padding-right: 20px;
-  background-color: rgb(48, 71, 49);
-  outline: 1px solid rgb(65, 80, 65);
+  background-color: rgb(148, 182, 135);
+  -webkit-box-shadow: 0px 0px 16px -1px rgba(54, 61, 55, 0.83);
+  -moz-box-shadow: 0px 0px 16px -1px rgba(54, 61, 55, 0.83);
+  box-shadow: 0px 0px 16px -1px rgba(54, 61, 55, 0.83);
+
+  .layout_container_header {
+    padding: 15px 30px;
+    font-weight: 700;
+    color: whitesmoke;
+    font-size: 55px;
+    text-shadow: -1px -1px 0 rgb(103, 129, 70), 1px -1px 0 rgb(103, 129, 70),
+      -1px 1px 0 rgb(103, 129, 70), 1px 1px 0 rgb(103, 129, 70);
+  }
 }
 
 .layout_container_right {
@@ -31,13 +33,17 @@ span {
 }
 
 .layout_container_filter {
-  background-color: rgb(99, 114, 79);
-  outline: 1px solid rgb(65, 80, 65);
+  background-color: #829569;
+  -webkit-box-shadow: 0px 0px 16px -1px rgba(54, 61, 55, 0.83);
+  -moz-box-shadow: 0px 0px 16px -1px rgba(54, 61, 55, 0.83);
+  box-shadow: 0px 0px 16px -1px rgba(54, 61, 55, 0.83);
 }
 
 .layout_container_details {
-  background-color: rgb(99, 114, 79);
-  outline: 1px solid rgb(65, 80, 65);
+  background-color: #829569;
+  -webkit-box-shadow: 0px 0px 16px -1px rgba(54, 61, 55, 0.83);
+  -moz-box-shadow: 0px 0px 16px -1px rgba(54, 61, 55, 0.83);
+  box-shadow: 0px 0px 16px -1px rgba(54, 61, 55, 0.83);
 }
 
 /* width */
